@@ -1,0 +1,74 @@
+@keyframes move-first-shape-ambient {
+  0%,
+  100% {
+    background: rgba(23, 207, 151, 0.24);
+  }
+  40% {
+    background: rgba(102, 33, 253, 0.4);
+    transform: translate(-200px);
+  }
+}
+
+@keyframes move-second-shape-ambient {
+  0%,
+  100% {
+    background: rgba(102, 33, 253, 0.5);
+  }
+  60% {
+    background: rgba(23, 207, 151, 0.5);
+    transform: translate(200px);
+  }
+}
+
+.ambient {
+  z-index: 1;
+  position: absolute;
+  inset: 0%;
+}
+
+.glow-content-display:before,
+.glow-content-display:after {
+  content: ' ';
+  grid-area: 1 / 1 / 2 / 2;
+  display: table;
+}
+
+.glow-ambient {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  filter: blur(100px);
+  transform: translate3d(0, 0, 0);
+  opacity: 0.5; /* Adjust opacity */
+}
+
+.first-shape-ambient,
+.second-shape-ambient {
+  background: #17cf97;
+}
+
+.first-shape-ambient {
+  position: absolute;
+  left: 0%;
+  right: 40%;
+  top: 12%;
+  bottom: 36%;
+  animation: move-second-shape-ambient 8s ease-in-out infinite;
+  z-index: 1;
+  will-change: transform;
+}
+
+.second-shape-ambient {
+  position: absolute;
+  left: 50%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  animation: move-first-shape-ambient 8s ease-in-out infinite;
+  z-index: 1;
+  will-change: transform;
+}
+
+.glow-content-display:after {
+  clear: both;
+}

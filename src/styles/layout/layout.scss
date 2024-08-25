@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  .bg-black {
+    background-color: $black;
+  }
+
+  // Sizes
+  .full-width {
+    width: 100%;
+  }
+
+  .full-height {
+    height: 100%;
+  }
+
+  .full-screen {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .full-screen-height {
+    height: 100vh;
+  }
+
+  .full-screen-width {
+    width: 100vw;
+  }
+
+  .grid-layout {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    .one-col {
+      grid-column: span 1;
+    }
+
+    .two-col {
+      grid-column: span 2;
+    }
+
+    .three-col {
+      grid-column: span 3;
+    }
+
+    .four-col {
+      grid-column: span 4;
+    }
+
+    .five-col {
+      grid-column: span 5;
+    }
+
+    .six-col {
+      grid-column: span 6;
+    }
+
+    .seven-col {
+      grid-column: span 7;
+    }
+
+    .eight-col {
+      grid-column: span 8;
+    }
+
+    .nine-col {
+      grid-column: span 9;
+    }
+
+    .ten-col {
+      grid-column: span 10;
+    }
+
+    .eleven-col {
+      grid-column: span 11;
+    }
+
+    .twelve-col {
+      grid-column: span 12;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import '../vars/colors.scss';
+@import '../typography/typography.scss';
+
+button {
+  border-radius: 12px;
+  height: min-content;
+  padding: 15px 30px;
+  text-decoration: none;
+  width: auto;
+  border: none;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 1.4vw;
+  font-family: $font-primary;
+  font-weight: 800;
+
+  &.btn-primary {
+    background-color: $button-primary;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  &.btn-secondary {
+    background-color: $button-secondary;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  &.btn-outline {
+    background-color: transparent;
+    border: 1px solid $button-primary;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  &.btn-gradient {
+    background: linear-gradient(
+      315deg,
+      rgb(153 0 255 / 30%) 0%,
+      rgb(2 136 255 / 30%) 100%
+    );
+    box-shadow: 0 0 #7046ff00;
+
+    &:hover {
+      cursor: pointer;
+      border: 1px solid $button-primary;
+    }
+  }
+}

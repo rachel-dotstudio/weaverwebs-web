@@ -1,0 +1,22 @@
+// hero header on homepage
+.hero {
+  text-align: center;
+  margin: 0;
+
+  .header-outer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header {
+    z-index: 2;
+  }
+}

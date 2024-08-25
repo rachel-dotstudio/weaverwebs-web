@@ -1,0 +1,55 @@
+// Typography Styles
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&;900display=swap');
+@import '../vars/colors.scss';
+@import 'rain.scss';
+
+$font-primary: 'Public Sans';
+$font-header: 'Rain';
+
+h1 {
+  font-family: 'Rain';
+
+  // Adjusted for hero text
+  &.hero {
+    font-size: 9vw;
+    letter-spacing: -0.3rem;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    height: auto;
+    color: $hero-h1;
+  }
+}
+
+p {
+  font-family: public-sans, sans-serif;
+  font-size: 1.5rem;
+  color: $primary-text;
+
+  &.strapline {
+    font-size: 2vw;
+    font-weight: 400;
+    color: $on-black-text;
+    margin: 0.5rem;
+    padding: 0;
+    line-height: 2vw;
+  }
+}
+
+.strapline-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 1rem;
+  padding: 0;
+  column-gap: 0;
+}
+
+// On-black colours
+.bg-black {
+  p {
+    color: $on-black-text;
+  }
+}
