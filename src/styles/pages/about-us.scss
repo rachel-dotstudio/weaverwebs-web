@@ -1,0 +1,18 @@
+@import '../vars/colors.scss';
+@import '../typography/typography.scss';
+
+.about-us-page {
+  padding: 2rem;
+  text-align: center;
+
+  h1 {
+    font-family: $font-header;
+    color: $primary-text;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-family: $font-primary;
+    margin-bottom: 1rem;
+  }
+}

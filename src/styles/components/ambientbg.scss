@@ -24,6 +24,7 @@
   z-index: 1;
   position: absolute;
   inset: 0%;
+  pointer-events: none; /* Prevents ambient background from capturing hover events */
 }
 
 .glow-content-display:before,
@@ -39,7 +40,8 @@
   position: relative;
   filter: blur(100px);
   transform: translate3d(0, 0, 0);
-  opacity: 0.5; /* Adjust opacity */
+  opacity: 0.5; 
+  z-index: 1;
 }
 
 .first-shape-ambient,

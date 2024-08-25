@@ -13,6 +13,7 @@ type ButtonProps = {
   isDarkBg?: boolean;
   variant?: (typeof ButtonVariant)[number];
   size?: (typeof ButtonSize)[number];
+  href?: string; // Add href prop for the URL
   leftIcon?: IconType | LucideIcon;
   rightIcon?: IconType | LucideIcon;
   classNames?: {
@@ -29,6 +30,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       isLoading,
       variant = 'primary',
       size = 'base',
+      href, // Destructure the href prop
       leftIcon: LeftIcon,
       rightIcon: RightIcon,
       classNames,
@@ -37,6 +39,33 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ) => {
     const disabled = isLoading || buttonDisabled;
 
+    const content = (
+      <>
+        {isLoading && <ImSpinner2 className="button__spinner" />}
+        {LeftIcon && <LeftIcon className="button__icon button__icon--left" />}
+        {children}
+        {RightIcon && (
+          <RightIcon className="button__icon button__icon--right" />
+        )}
+      </>
+    );
+
+    if (href) {
+      // Render an <a> tag if href is provided
+      return (
+        <a
+          href={href}
+          ref={ref as any}
+          className={`btn btn-${variant} button--${size} ${
+            classNames?.leftIcon ? classNames.leftIcon : ''
+          } ${classNames?.rightIcon ? classNames.rightIcon : ''}`}
+        >
+          {content}
+        </a>
+      );
+    }
+
+    // Default to rendering a <button> tag
     return (
       <button
         ref={ref}
@@ -46,12 +75,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           classNames?.leftIcon ? classNames.leftIcon : ''
         } ${classNames?.rightIcon ? classNames.rightIcon : ''}`}
       >
-        {isLoading && <ImSpinner2 className="button__spinner" />}
-        {LeftIcon && <LeftIcon className="button__icon button__icon--left" />}
-        {children}
-        {RightIcon && (
-          <RightIcon className="button__icon button__icon--right" />
-        )}
+        {content}
       </button>
     );
   },

@@ -1,5 +1,3 @@
-// src/components/Header.tsx
-
 import React from 'react';
 
 import '@/styles/components/header.scss';
@@ -26,7 +24,7 @@ const Header: React.FC = () => {
         <p className="strapline">We build success</p>
       </div>
       <div className="button-outer">
-        <Button variant="gradient">Find out how</Button>
+        <Button variant="gradient" href="/about-us">Find out how</Button>
       </div>
     </header>
   );

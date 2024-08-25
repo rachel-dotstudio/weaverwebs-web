@@ -1,7 +1,20 @@
 @import '../vars/colors.scss';
 @import '../typography/typography.scss';
 
-button {
+.button-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 1rem;
+  padding: 0;
+  column-gap: 0;
+  z-index: 3;
+}
+
+button,
+.btn {
   border-radius: 12px;
   height: min-content;
   padding: 15px 30px;
@@ -13,6 +26,7 @@ button {
   font-size: 1.4vw;
   font-family: $font-primary;
   font-weight: 800;
+  cursor: pointer;
 
   &.btn-primary {
     background-color: $button-primary;
@@ -36,14 +50,18 @@ button {
   &.btn-gradient {
     background: linear-gradient(
       315deg,
-      rgb(153 0 255 / 30%) 0%,
-      rgb(2 136 255 / 30%) 100%
+      rgb(153, 0, 255, 0.3) 0%,
+      rgb(2, 136, 255, 0.3) 100%
     );
-    box-shadow: 0 0 #7046ff00;
+    box-shadow: 0 0 0 transparent;
 
     &:hover {
-      cursor: pointer;
       border: 1px solid $button-primary;
+      background: linear-gradient(
+        315deg,
+        rgb(153, 0, 255, 0.5) 0%,
+        rgb(2, 136, 255, 0.5) 100%
+      );
     }
   }
 }
