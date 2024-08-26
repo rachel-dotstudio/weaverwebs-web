@@ -1,9 +1,14 @@
+[[headers]]
+for = "/*"
+  [headers.values]
+  Link = "</src/fonts/rain.otf>; rel=preload; as=font; type=font/otf; crossorigin=anonymous"
+
 # netlify.toml
 [build]
   command = "npm run build"
   functions = "netlify/functions"
   publish = ".next"
-  
+
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
   #[[redirects]]
