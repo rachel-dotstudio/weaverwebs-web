@@ -7,18 +7,20 @@ import '@/styles/styles.scss';
 
 import { siteConfig } from '@/constant/config';
 
+// Define your metadata
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default: 'Weaverwebs - Building Websites, Building Success',
     template: `%s | ${siteConfig.title}`,
   },
-  description: siteConfig.description,
-  viewport: 'width=device-width, initial-scale=1',
-  icons: {
-    icon: '/favicon/favicon2.ico',
-  },
 };
+
+// Define viewport settings
+export const generateViewport = () => ({
+  width: 'device-width',
+  initialScale: 1,
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
