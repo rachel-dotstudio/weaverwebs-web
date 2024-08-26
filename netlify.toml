@@ -9,7 +9,7 @@ for = "/*"
   publish = ".next"
 
 [context.production.environment]
-  NODE_VERSION = "16.14.0"
+  NODE_VERSION = "18.17.0"
 
 # Explicitly define the functions directory as the internal one Netlify uses
 [functions]
