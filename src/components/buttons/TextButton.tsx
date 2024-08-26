@@ -1,3 +1,6 @@
+// src/components/buttons/TextButton.tsx
+// TextButton component
+
 import * as React from 'react';
 
 const TextButtonVariant = ['primary', 'basic'] as const;

@@ -1,4 +1,6 @@
 // src/components/AmbientBackground.tsx
+// AmbientBackground component
+
 import React from 'react';
 
 import '@/styles/components/ambientbg.scss';

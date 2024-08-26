@@ -1,3 +1,6 @@
+// src/components/headerHero.tsx
+// Header component
+
 import React from 'react';
 
 import '@/styles/components/header.scss';

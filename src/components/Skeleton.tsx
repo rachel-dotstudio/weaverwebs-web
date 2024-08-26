@@ -1,3 +1,6 @@
+// src/components/Skeleton.tsx
+// Skeleton component
+
 import * as React from 'react';
 
 type SkeletonProps = React.ComponentPropsWithoutRef<'div'>;

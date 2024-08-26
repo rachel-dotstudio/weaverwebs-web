@@ -1,3 +1,6 @@
+//src/styles/components/ambientbg.scss
+// Ambient Background
+
 @keyframes move-first-shape-ambient {
   0%,
   100% {
@@ -27,12 +30,7 @@
   pointer-events: none; /* Prevents ambient background from capturing hover events */
 }
 
-.glow-content-display:before,
-.glow-content-display:after {
-  content: ' ';
-  grid-area: 1 / 1 / 2 / 2;
-  display: table;
-}
+ç
 
 .glow-ambient {
   width: 100vw;

@@ -1,3 +1,6 @@
+// src/components/buttons/IconButton.tsx
+// IconButton component
+
 import { LucideIcon } from 'lucide-react';
 import * as React from 'react';
 import { IconType } from 'react-icons';

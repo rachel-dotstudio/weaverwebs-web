@@ -1,3 +1,6 @@
+// src/components/links/PrimaryLink.tsx
+// PrimaryLink component
+
 import * as React from 'react';
 
 const PrimaryLinkVariant = ['primary', 'secondary'] as const;

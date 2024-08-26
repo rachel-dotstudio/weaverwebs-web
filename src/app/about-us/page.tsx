@@ -1,3 +1,6 @@
+// src/app/about-us/page.tsx
+// AboutUs page component
+
 import React from 'react';
 
 const AboutUs: React.FC = () => {
