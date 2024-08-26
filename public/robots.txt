@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://weaverwebs.com
+
+# Sitemaps
+Sitemap: https://weaverwebs.com/sitemap.xml

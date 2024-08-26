@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     default: 'Weaverwebs - Building Websites, Building Success',
     template: `%s | ${siteConfig.title}`,
   },
+  description: 'Weaverwebs specializes in creating high-quality, user-friendly websites to help your business succeed online. Learn more about our services today.',
 };
 
 // Define viewport settings
@@ -25,6 +26,12 @@ export const generateViewport = () => ({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        {/* Meta tags can be added directly here if needed */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Weaverwebs specializes in creating high-quality, user-friendly websites to help your business succeed online. Learn more about our services today." />
+        {/* Additional metadata tags can be added as needed */}
+      </head>
       <body>{children}</body>
     </html>
   );

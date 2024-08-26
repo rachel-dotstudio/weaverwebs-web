@@ -9,6 +9,7 @@ const AboutUs: React.FC = () => {
   useEffect(() => {
     // Example of a passive event listener
     const handleScroll = () => {
+      // eslint-disable-next-line no-console
       console.log('User is scrolling');
     };
 
