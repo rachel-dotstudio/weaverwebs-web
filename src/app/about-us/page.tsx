@@ -1,9 +1,25 @@
 // src/app/about-us/page.tsx
 // AboutUs page component
 
-import React from 'react';
+'use client';
+
+import React, { useEffect } from 'react';
 
 const AboutUs: React.FC = () => {
+  useEffect(() => {
+    // Example of a passive event listener
+    const handleScroll = () => {
+      console.log('User is scrolling');
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="about-us-page">
       <h1>About Us</h1>
