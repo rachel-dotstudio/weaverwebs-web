@@ -1,7 +1,7 @@
 [[headers]]
 for = "/*"
   [headers.values]
-  Link = "</src/fonts/rain.otf>; rel=preload; as=font; type=font/otf; crossorigin=anonymous"
+  Link = "</public/fonts/rain.otf>; rel=preload; as=font; type=font/otf; crossorigin=anonymous"
 
 # netlify.toml
 [build]
